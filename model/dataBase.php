@@ -8,7 +8,7 @@
 
  try
  {
-    $conectionToDatabase = new PDO("mysql:host=$server;dbname=$dataBase",$userName,$password);
+    $conectionToDatabase = mysqli_connect($server, $userName, $password, $dataBase);
  }
  catch(Exception $err)
  {

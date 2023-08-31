@@ -1,10 +1,9 @@
 <?php include("../templates/header.php") ?>
 
 <br><br>
-
 <div class="card text">
   <div class="card-header">
-    <strong>Empleados</strong> <a href="#" class="btn btn-primary">Agregar empleado</a>
+    <strong>Empleados</strong> <a href="/responsivedesign/views/viewsEmployees/addEmployee.php" class="btn btn-primary">Agregar empleado</a>
   </div>
   <div class="card-body">
     <table class="table">
@@ -25,9 +24,17 @@
                 <th>foto.png</th>
                 <th>cv.pdf</th>
                 <th>Ing en software</th>
-                <th><button type="button" class="btn btn-warning">Editar</button> <button type="button" class="btn btn-danger">Eliminar</button></th>
+                <th>
+                  <a class="btn btn-warning" href="/responsivedesign/views/viewsEmployees/editEmployee.php" role="button">Editar</a>
+                  <button type="button" class="btn btn-danger" id="deleteEmployee">Eliminar</button>
+                </th>
             </tr>
         </tbody>
     </table>
   </div>
 </div>
+
+
+
+<script src="./resources/deleteEmployeeAlert.js"></script>
+<?php include("../templates/footer.php"); ?>
